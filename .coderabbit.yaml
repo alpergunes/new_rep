@@ -1,0 +1,51 @@
+# CodeRabbit Configuration
+version: 1
+
+# Review settings
+review:
+  # Enable automatic code reviews
+  enabled: true
+  
+  # Review types to perform
+  types:
+    - security
+    - performance
+    - maintainability
+    - documentation
+    
+  # Language-specific settings
+  languages:
+    python:
+      # Enable Python-specific checks
+      enabled: true
+      # Check for common Python issues
+      checks:
+        - unused_imports
+        - undefined_variables
+        - type_hints
+        - docstrings
+        - code_style
+
+# Comment settings
+comments:
+  # Enable inline comments
+  inline: true
+  # Enable summary comments
+  summary: true
+  # Maximum number of comments per file
+  max_per_file: 10
+
+# Ignore patterns
+ignore:
+  - "**/__pycache__/**"
+  - "**/.venv/**"
+  - "**/.env"
+  - "**/.git/**"
+  - "**/node_modules/**"
+
+# Custom prompts for the AI
+prompts:
+  - "Please review this code for potential bugs and security issues"
+  - "Suggest improvements for code readability and maintainability"
+  - "Check if the code follows Python best practices"
+  - "Verify if all necessary documentation is present"
